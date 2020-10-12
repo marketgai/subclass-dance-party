@@ -1,3 +1,11 @@
+// Refactor makeBlinkyDancer in to pseudoclassical pattern
+var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
+  // Call on the superClass
+};
+
+
+/*
+=============================================
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   var blinkyDancer = makeDancer(top, left, timeBetweenSteps);
 
@@ -17,3 +25,4 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 
   return blinkyDancer;
 };
+*/
