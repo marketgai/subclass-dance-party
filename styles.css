@@ -4,7 +4,7 @@ body, html{
 body{
   margin: 0px;
   background-color:#444;
-  font-size: 18px;
+  font-size: 13px;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -12,6 +12,10 @@ body, a:link, a:visited, a:active{
 .title, .addDancerButton, .addLeftRightButton{
   padding:5px 12px;
   float:right;
+}
+.methodButton{
+  padding:5px 12px;
+  float:left;
 }
 .topbar{
   height:32px;
@@ -42,6 +46,16 @@ body, a:link, a:visited, a:active{
   height: 100px;
 }
 
+.tingle{
+  -webkit-transition: top 1s, left 1s, height .5s, width .5s;
+  background: url(assets/tingleDance.gif);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  position:absolute;
+  width:  100px;
+  height: 100px;
+}
 
 
 
