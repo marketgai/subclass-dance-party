@@ -4,15 +4,18 @@
 var Dancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class="dancer"></span>');
-  this.step();
   console.log('hey');
   this.top = top;
   this.left = left;
+  this.moving = true;
+  this.step();
   this.setPosition(top, left);
 };
 
 Dancer.prototype.step = function() {
-  setTimeout(this.step.bind(this), this.timeBetweenSteps);
+  if (this.moving) {
+    setTimeout(this.step.bind(this), this.timeBetweenSteps);
+  }
 };
 
 Dancer.prototype.setPosition = function(top, left) {
@@ -22,16 +25,19 @@ Dancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
-// lineup at 200 along the y axis
+// lineup at 220 from the top
 Dancer.prototype.lineUp = function() {
-  this.top = 200;
+  this.top = 220;
   var styleSettings = {
-    top: 200,
+    top: 220,
   };
   this.$node.css(styleSettings);
+  this.moving = false;
 };
 
 Dancer.prototype.breakLine = function() {
+  this.moving = true;
+  this.step();
   this.top = $('body').height() * Math.random();
   this.setPosition(this.top, this.left);
 };
