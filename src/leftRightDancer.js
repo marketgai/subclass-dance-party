@@ -1,7 +1,7 @@
 var LeftRightDancer = function(top, left, timeBetweenSteps) {
   Dancer.call(this, top, left, timeBetweenSteps);
   this.$node.addClass('runningLink');
-  this.displacement = 40;
+  this.displacement = 60;
 };
 
 LeftRightDancer.prototype = Object.create(Dancer.prototype);
@@ -18,24 +18,18 @@ LeftRightDancer.prototype.step = function() {
 
   }.bind(this), 0);
 
-  let newX = this.$node.position().left + 50;
+  let newX = this.$node.position().left + this.displacement;
 
-  var borderCollision =
-    newX - 50 <= 0 ||
-    newX + 50 >= $('body').width();
 
-  if (borderCollision) {
+
+  if (newX - 50 <= 0 || newX + 70 >= $('body').width()) {
     if (newX > $('body').width()) {
       this.displacement = -40;
       this.$node.css('transform', 'rotateY(180deg)');
     }
-
     if (newX < 0) {
       this.displacement = 40;
       this.$node.css('transform', 'rotateY(0)');
     }
-    borderCollision = false;
-
-
   }
 };

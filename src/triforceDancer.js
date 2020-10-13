@@ -14,13 +14,13 @@ LeftRightDancer.prototype.step = function() {
     width: 70
   };
   this.$node.css(styleSettings);
-  var self = this;
+
   $('.triforce').on('mouseover', function() {
     var styleSettings = {
       height: 200,
       width: 200
     };
-    self.$node.css(styleSettings);
+    this.$node.css(styleSettings);
   });
 
 };

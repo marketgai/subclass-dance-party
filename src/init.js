@@ -34,7 +34,13 @@ $(document).ready(function() {
 
   $('.lineUpButton').on('click', function(event) {
     window.dancers.forEach(function(dancer) {
+
       dancer.lineUp();
+      setTimeout(function() {
+        dancer.lineUp();
+      }
+      , 1000);
+
     });
   });
 
