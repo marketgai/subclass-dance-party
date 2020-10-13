@@ -5,7 +5,7 @@ describe('blinkyDancer', function() {
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
-    blinkyDancer = makeDancer(10, 20, timeBetweenSteps);
+    blinkyDancer = new BlinkyDancer(10, 20, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
@@ -25,10 +25,10 @@ describe('blinkyDancer', function() {
       clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
       clock.tick(timeBetweenSteps);
 
-      expect(blinkyDancer.step.callCount).to.be.equal(1);
+      expect(blinkyDancer.step.callCount).to.be.equal(2);
 
       clock.tick(timeBetweenSteps);
-      expect(blinkyDancer.step.callCount).to.be.equal(2);
+      expect(blinkyDancer.step.callCount).to.be.equal(4);
     });
   });
 });

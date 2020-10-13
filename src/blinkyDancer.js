@@ -1,21 +1,28 @@
-/*// Refactor makeBlinkyDancer in to pseudoclassical pattern
-var MakeBlinkyDancer = function(top, left, timeBetweenSteps) {
+// Refactor makeBlinkyDancer in to pseudoclassical pattern
+
+var BlinkyDancer = function(top, left, timeBetweenSteps) {
   // Call on the superClass
-  MakeDancer.call(this);
+  Dancer.call(this, top, left, timeBetweenSteps);
+  this.step();
 };
 
-MakeBlinkyDancer.prototype = Object.create(MakeDancer.prototype);
-MakeBlinkyDancer.prototype.constructor = MakeBlinkyDancer;
+// delegate the the Dancer methods to the BlinkyDancer
+BlinkyDancer.prototype = Object.create(Dancer.prototype);
+// assign the BlinkyDancer constructor to BlinkyDancer
+BlinkyDancer.prototype.constructor = BlinkyDancer;
 
 
-MakeBlinkyDancer.prototype.step = function() {
-  MakeDancer.prototype.step.call(this);
-  $(this.$node).toggle();
+BlinkyDancer.prototype.step = function() {
+  Dancer.prototype.step.call(this);
+  console.log('lololol heyo');
+  this.$node.toggle();
 };
-*/
 
 
 
+
+
+/*
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   var blinkyDancer = makeDancer(top, left, timeBetweenSteps);
 
@@ -35,3 +42,6 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
 
   return blinkyDancer;
 };
+
+*/
+

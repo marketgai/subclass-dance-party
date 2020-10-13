@@ -1,28 +1,33 @@
 // Creates and returns a new dancer object that can step
 // Refactoring functional to pseudoclassical pattern
-/*
-var MakeDancer = function(top, left, timeBetweenSteps) {
+
+var Dancer = function(top, left, timeBetweenSteps) {
   this.timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class="dancer"></span>');
   this.step();
+  console.log('hey');
+  this.top = top;
+  this.left = left;
   this.setPosition(top, left);
 };
 
-MakeDancer.prototype.step = function() {
+Dancer.prototype.step = function() {
+  console.log('Dancer');
   setTimeout(this.step.bind(this), this.timeBetweenSteps);
 };
 
-MakeDancer.prototype.setPosition = function(top, left) {
+Dancer.prototype.setPosition = function(top, left) {
   var styleSettings = {
     top: top,
     left: left
   };
   this.$node.css(styleSettings);
 };
-*/
 
 
 
+
+/*
 var makeDancer = function(top, left, timeBetweenSteps) {
 
   var dancer = {};
@@ -54,4 +59,6 @@ var makeDancer = function(top, left, timeBetweenSteps) {
 
   return dancer;
 };
+*/
+
 
