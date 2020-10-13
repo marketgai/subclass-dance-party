@@ -6,6 +6,8 @@ var LeftRightDancer = function(top, left, timeBetweenSteps) {
 
 LeftRightDancer.prototype = Object.create(Dancer.prototype);
 LeftRightDancer.prototype.constructor = LeftRightDancer;
+
+
 LeftRightDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
 
@@ -16,7 +18,7 @@ LeftRightDancer.prototype.step = function() {
 
   }.bind(this), 0);
 
-  newX = this.$node.position().left + 50;
+  let newX = this.$node.position().left + 50;
 
   var borderCollision =
     newX - 50 <= 0 ||
