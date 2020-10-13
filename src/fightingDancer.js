@@ -30,7 +30,7 @@ FightingDancer.prototype.step = function() {
   if (HBorderCollision) {
     if (newX > $('body').width()) {
       this.HDisplacement = -this.HDisplacement;
-      this.$node.css('transform', 'rotateY()');
+      this.$node.css('transform', 'rotateY(0)');
     }
     if (newX < 0) {
       this.HDisplacement = -this.HDisplacement;
@@ -47,11 +47,3 @@ FightingDancer.prototype.step = function() {
 
 };
 
-Dancer.prototype.lineUp = function() {
-  this.top = 220;
-  var styleSettings = {
-    top: 220,
-  };
-  this.$node.css(styleSettings);
-  this.moving = false;
-};
