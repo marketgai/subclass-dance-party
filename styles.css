@@ -24,6 +24,13 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+.background {
+  border: 2px solid black;
+  padding: 25px;
+  background: url(assets/Castle_Courtyard.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%
+}
 .dancer{
   -webkit-transition: top 1s, left 1s, height .5s, width .5s;
   background: url(assets/linkdoofDance.gif);
@@ -49,6 +56,17 @@ body, a:link, a:visited, a:active{
 .tingle{
   -webkit-transition: top 1s, left 1s, height .5s, width .5s;
   background: url(assets/tingleDance.gif);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  position:absolute;
+  width:  100px;
+  height: 100px;
+}
+
+.triforce{
+  -webkit-transition: top 1s, left 1s, height .5s, width .5s;
+  background: url(assets/triforce.webp);
   background-size: 100%;
   background-repeat: no-repeat;
   border: 0;
