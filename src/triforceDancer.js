@@ -10,8 +10,8 @@ TriforceDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
 
   var styleSettings = {
-    height: 70,
-    width: 70
+    height: 100,
+    width: 100
   };
   this.$node.css(styleSettings);
 
@@ -21,7 +21,7 @@ TriforceDancer.prototype.step = function() {
       height: 200,
       width: 200
     };
-    this.$node.css(styleSettings);
+    self.$node.css(styleSettings);
   });
 
 };

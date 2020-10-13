@@ -10,14 +10,12 @@ FightingDancer.prototype.constructor = FightingDancer;
 
 FightingDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
-  console.log('fighting dancer step');
 
   setTimeout(function() {
     var currX = this.$node.position().left;
     var currY = this.$node.position().top;
 
     Dancer.prototype.setPosition.call(this, currY + this.VDisplacement, currX + this.HDisplacement);
-
   }.bind(this), 0);
 
   // find the next placement to see if it would hi thte edge of the screen
