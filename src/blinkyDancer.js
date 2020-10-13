@@ -14,7 +14,7 @@ BlinkyDancer.prototype.constructor = BlinkyDancer;
 
 BlinkyDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
-  console.log('lololol heyo');
+  console.log('blinky step');
   this.$node.toggle();
 };
 
