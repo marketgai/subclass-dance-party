@@ -22,6 +22,22 @@ Dancer.prototype.setPosition = function(top, left) {
   };
   this.$node.css(styleSettings);
 };
+// lineup at 200 along the y axis
+Dancer.prototype.lineUp = function() {
+  this.top = 200;
+  var styleSettings = {
+    top: 200,
+  };
+  this.$node.css(styleSettings);
+};
+
+Dancer.prototype.breakLine = function() {
+  this.top = $('body').height() * Math.random();
+  this.setPosition(this.top, this.left);
+};
+
+
+
 
 
 

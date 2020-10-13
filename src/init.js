@@ -32,5 +32,18 @@ $(document).ready(function() {
     window.dancers.push(dancer);
   });
 
+  $('.lineUpButton').on('click', function(event) {
+    window.dancers.forEach(function(dancer) {
+      dancer.lineUp();
+    });
+  });
+
+  $('.breakLineButton').on('click', function(event) {
+    window.dancers.forEach(function(dancer) {
+      dancer.breakLine();
+    });
+  });
+
+
 });
 
