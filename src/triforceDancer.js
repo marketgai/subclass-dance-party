@@ -6,7 +6,7 @@ var TriforceDancer = function(top, left, timeBetweenSteps) {
 TriforceDancer.prototype = Object.create(Dancer.prototype);
 TriforceDancer.prototype.constructor = TriforceDancer;
 
-LeftRightDancer.prototype.step = function() {
+TriforceDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
 
   var styleSettings = {
@@ -15,6 +15,7 @@ LeftRightDancer.prototype.step = function() {
   };
   this.$node.css(styleSettings);
 
+  var self = this;
   $('.triforce').on('mouseover', function() {
     var styleSettings = {
       height: 200,
