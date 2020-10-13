@@ -42,7 +42,7 @@ body, a:link, a:visited, a:active{
   height: 100px;
 }
 
-.runningLink {
+.runningLink{
   -webkit-transition: top 1s, left 1s, height .5s, width .5s;
   background: url(assets/linkRunning.gif);
   background-size: 100%;
@@ -71,8 +71,20 @@ body, a:link, a:visited, a:active{
   background-repeat: no-repeat;
   border: 0;
   position:absolute;
+  width:  70px;
+  height: 70px;
+}
+
+.fightingLink{
+  -webkit-transition: top 1s, left 1s, height .5s, width .5s;
+  background: url(assets/fightingLink.webp);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 0;
+  position:absolute;
   width:  100px;
-  height: 100px;
+  height: 200px;
+
 }
 
 
